@@ -2,8 +2,15 @@
 
 Getting started with Clojure from simple examples.
 
+## Table of Contents
+
+- [Day 1](/day1)
+- [License](#license)
+
 ---
 
 ## License
 
-[![CC0](http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
+This project is licensed under the MIT License.
+
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
