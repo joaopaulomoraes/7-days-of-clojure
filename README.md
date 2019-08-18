@@ -4,7 +4,7 @@ Getting started with Clojure from simple examples.
 
 ## Table of Contents
 
-- [Day 1](/day1)
+- [Day 1 - Syntax](/day1)
 - [License](#license)
 
 ---
