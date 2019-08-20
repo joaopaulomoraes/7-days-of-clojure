@@ -5,6 +5,7 @@ Getting started with Clojure from simple examples.
 ## Table of Contents
 
 - [Day 1 - Syntax](/day1)
+- [Day 2 – Structures](/day2)
 - [License](#license)
 
 ---
