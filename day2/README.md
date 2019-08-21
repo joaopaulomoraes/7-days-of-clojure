@@ -137,12 +137,229 @@ Like many other languages, Clojure supports string formatting with format `funct
 ;; user=> "if (= 2 (+ 1 1)) returns true"
 ```
 
+## Boolean
+
+In Clojure, everything except `false` and `nil` are `true`.
+
+```clojure
+(boolean false)
+;; user=> false
+
+(boolean nil)
+;; user=> false
+
+(boolean 0)
+;; user=> true
+
+(boolean 1)
+;; user=> true
+
+(boolean "A simple string")
+;; user=> true
+
+(boolean :property)
+;; user=> true
+```
+
+## Lists
+
+A list is a simple collection of values ​​by grouping values ​​in parentheses with `'` (single quote) at the beginning.
+
+```clojure
+'(:a :b :c)
+;; user=> (:a :b :c)
+
+'(0 1 1 2 3)
+;; user=> (0 1 1 2 3)
+
+'(7 "days" :clojure)
+;; user=> (7 "days" :clojure)
+```
+
+### conj
+
+`conj` is used to add values to a list.
+
+```clojure
+(conj '(1 2 3) 1 0)
+;; user=> (0 1 1 2 3)
+
+(conj '("days" "of" "Clojure") :days 7)
+;; user=> (7 :days "days" "of" "Clojure")
+
+(conj '("i" "s" "t") "l")
+;; user=> ("l" "i" "s" "t")
+```
+
+Note that the new value is added to the top.
+
+### remove elements
+
+Since Clojure follows the functional programming paradigm, data should not be mutated, so there is no built-in function to do this. But you can still use seq library functions, such as `remove`, `filter`, or `drop`.
+
+You can learn more [here](https://clojure.org/reference/sequences).
+
+### nth
+
+To get a value from the list, use `nth` with its index number. As in another language, the index starts at 0 in Clojure.
+
+```clojure
+(nth '(1 2 3 5 8) 1)
+;; user=> 2
+
+(nth '(1 2 3 5 8) 0)
+;; user=> 1
+
+(nth '(1 2 3 5 8) 3)
+;; user=> 5
+```
+
+### count
+
+Use `count` to get the amount of values in a list.
+
+```clojure
+(count '(:a :b :c 1 5 13 "d" "e"))
+;; user=> 8
+
+(count '(7 14 21))
+;; user=> 3
+
+(count '())
+;; user=> 0
+```
+
+## Vectors
+
+Vectors are similar to lists, except for adding new elements at the end.
+
+### conj
+
+```clojure
+(conj [0 9 8 7 6 5] 4)
+;; user=> [0 9 8 7 6 5 4]
+
+(conj [:a :b "c"] 5)
+;; user=> [:a :b "c" 5]
+```
+
+Vectors also have convenient functions to access elements, like `first` and `second`.
+
+```clojure
+(nth [0 9 8 7 6 5] 4)
+;; user=> 6
+
+(first [:a :b "c"])
+;; user=> :a
+
+(last [0 1 1 3 "I'm last"])
+;; user=> "I'm last"
+```
+
+## Maps
+
+Maps are key-value data structure to store multiple values.
+
+```clojure
+{}
+;; user=> {}
+
+{:id "abcd-1234"
+ :title "My Map"
+ :color "aqua"
+ :author {:id "dcba-4321"
+          :name "@me"}}
+;; user=> {:id "abcd-1234", :title "My Map", :color "aqua", :author {:id "dcba-4321", :name "@me"}}
+
+{:language "Clojure"
+ :version "1.10.0"
+ :author "Rich Hickey"
+ :year 2007}
+;; user=> {:language "Clojure", :version "1.10.0", :author "Rich Hickey", :year 2007}
+```
+
+### get
+
+To get value from key, use `get`.
+
+```clojure
+(get {:id "abcd-1234"
+      :title "My Map"
+      :color "aqua"
+      :author {:id "dcba-4321"
+                :name "@me"}} :color)
+;; user=> "aqua"
+
+(get {:language "Clojure"
+      :version "1.10.0"
+      :author "Rich Hickey"
+      :year 2007} :language)
+;; user=> "Clojure"
+```
+
+### assoc
+
+To add a key-value pair, use `assoc`, but note that if the value already exists, it will be replaced.
+
+```clojure
+(assoc {:language "Clojure"
+        :version "1.10.0"
+        :author "Rich Hickey"
+        :year 2007} :dialect "Lisp")
+;; user=> {:language "Clojure", :version "1.10.0", :author "Rich Hickey", :year 2007, :dialect "Lisp"}
+
+(assoc {:id "abcd-1234"
+        :title "My Map"
+        :color "aqua"
+        :author {:id "dcba-4321"
+                  :name "@me"}} :title "My new Map")
+;; user=> {:id "abcd-1234", :title "My new Map", :color "aqua", :author {:id "dcba-4321", :name "@me"}}
+```
+
+### merge
+
+Use `merge` to combine maps.
+
+```clojure
+(merge {:a "a"} {:b "b"})
+;; user=> {:a "a", :b "b"}
+
+(merge {:id "0123-defg"
+        :name "Map"} {:keys {:id :name}})
+;; user=> {:id "0123-defg", :name "Map", :keys {:id :name}}
+```
+
+### keys
+
+`keys` is used to get all keys from a map.
+
+```clojure
+(keys {:id "abcd-1234"
+       :title "My Map"
+       :color "aqua"
+       :author {:id "dcba-4321"
+                :name "@me"}})
+;; user=> (:id :title :color :author)
+```
+
+### vals
+
+`vals` is used to get all values from a map.
+
+```clojure
+(vals {:language "Clojure"
+       :version "1.10.0"
+       :author "Rich Hickey"
+       :year 2007})
+;; user=> ("Clojure" "1.10.0" "Rich Hickey" 2007)
+```
+
 ## Test your knowledge
 
 - Using the REPL, compute the sum of `112358` and `424956`.
 - Rewrite the following algebraic expression as a Clojure expression: `(7 + 3 * 10 + 5) / 14`.
 - Format the phrase "Create simple solutions and make experiences unique" with the `format` function for the words "simple" and "unique".
-
+- Build your imagination.
 
 ## Day 3 - Control flow and Recursion
 [See more](/day3)
