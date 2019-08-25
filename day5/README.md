@@ -21,6 +21,11 @@ To define a namespace, use the `ns` macro.
 
 Typically, each `ns` references a specific file.
 
+```bash
+directory.file-name.clj
+directory.subdirectory.file-name.clj
+```
+
 ```clojure
 ;; file-name.clj
 (ns seven-days-of-clojure.file-name)
