@@ -125,7 +125,7 @@ The rest parameter is indicated by an ampersand `&`.
 ```clojure
 (defn hello
   [guy]
-  (str "Hello, " guy "!"))
+    (str "Hello, " guy "!"))
 
 (defn bot-codger
   [& guys]
