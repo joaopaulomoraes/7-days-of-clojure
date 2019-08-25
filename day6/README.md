@@ -1,4 +1,4 @@
-# Day 5 – Namespaces
+# Day 6 – Tests
 
 The Clojure main library includes a test framework written by Stuart Sierra and the test framework is under the `clojure.test` namespace.
 
