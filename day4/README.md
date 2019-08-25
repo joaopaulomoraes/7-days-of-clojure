@@ -10,7 +10,7 @@ In Clojure functions are first-class objects, that is, it does all the basic ope
 All Clojure operations have the same syntax: opening parentheses, operator, operands, closing parentheses.
 
 ```clojure
-(operand operator1 operator2 operatorn)
+(operator operand1 operand2 operandn)
 ```
 
 You may not have noticed, but so far you have seen many function calls.
