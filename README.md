@@ -9,6 +9,7 @@ Getting started with Clojure from simple examples.
 - [Day 3 – Control flow and Recursion](/day3)
 - [Day 4 – Functions](/day4)
 - [Day 5 – Namespaces](/day5)
+- [Day 6 – Tests](/day6)
 - [License](#license)
 
 ---
