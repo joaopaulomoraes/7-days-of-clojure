@@ -159,7 +159,7 @@ Run the tests with the `run-tests` function followed by their namespaces.
 - Create a namespace with many different functions and test them all by importing into a specific namespace for testing.
 - Build your imagination
 
-## Day 6 - ?
+## Day 7 - Create your first project
 [See more](/day7)
 
 ---
