@@ -119,6 +119,22 @@ Clojure functions can be defined with zero or more parameters and the number of 
      (do-things first-arg)))
 ```
 
+Clojure also lets you define arity-variable functions by including a rest parameter, which puts the rest of these arguments in a list.
+The rest parameter is indicated by an ampersand `&`.
+
+```clojure
+(defn hello
+  [guy]
+  (str "Hello, " guy "!"))
+
+(defn bot-codger
+  [& guys]
+    (map hello guys))
+
+(bot-codger "John" "Nathan" "Tony")
+;; user=> ("Hello, John!" "Hello, Nathan!" "Hello, Tony!")
+```
+
 ### Destructuring
 
 The `destructuring` lets you link names to values within a collection.
