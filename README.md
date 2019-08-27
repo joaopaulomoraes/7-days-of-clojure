@@ -10,6 +10,7 @@ Getting started with Clojure from simple examples.
 - [Day 4 – Functions](/day4)
 - [Day 5 – Namespaces](/day5)
 - [Day 6 – Tests](/day6)
+- [Day 7 – Create and run your first project](/day7)
 - [License](#license)
 
 ---
