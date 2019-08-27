@@ -87,7 +87,7 @@ This should be the output: `This is the first app in Clojure!`
 
 Using `lein run` to test your development code is great and helps you save a lot of time without compiling a file.
 
-But there are cases where you will need to compile your program to run on other platforms that do not have Leiningen or some production code. To complicate the project, you can simply use the following command:
+But there are cases where you will need to compile your program to run on other platforms that do not have Leiningen or some production code. To compilate the project, you can simply use the following command:
 
 ```bash
 lein uberjar
