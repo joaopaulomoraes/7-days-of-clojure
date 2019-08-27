@@ -155,11 +155,11 @@ Run the tests with the `run-tests` function followed by their namespaces.
 ## Test your knowledge
 
 - Create a test that checks if an argument is greater than `10`.
-- Create a test that tests if the return of a function is a string with the value `" I love learn Clojure "`.
+- Create a test that tests if the return of a function is a string with the value `"I love learn Clojure"`.
 - Create a namespace with many different functions and test them all by importing into a specific namespace for testing.
 - Build your imagination
 
-## Day 7 - Create your first project
+## Day 7 - Create and run your first project
 [See more](/day7)
 
 ---
