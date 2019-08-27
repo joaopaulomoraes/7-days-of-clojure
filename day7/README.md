@@ -98,13 +98,13 @@ When you run the command, you will be presented with your Clojure program that c
 If all went well, you should have the following console output.
 
 ```bash
-Created .../my-first-clojure-app/target/uberjar my-first-clojure-app-0.1.0-SNAPSHOT.jar
+Created .../my-first-clojure-app/java -jar target/uberjar/my-first-clojure-app-0.1.0-SNAPSHOT-standalone.jar
 ```
 
 Voce pode executar o programa gerado como faria com qualquer programa em Java.
 
 ```bash
-java -jar target/uberjar/my-first-clojure-app-0.1.0-SNAPSHOT.jar
+java -jar target/uberjar/my-first-clojure-app-0.1.0-SNAPSHOT-standalone.ja
 ```
 
 Wow, congratulations! You now have all the basic details you need to build, run, and distribute (very) basic Clojure programs.
