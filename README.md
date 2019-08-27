@@ -13,6 +13,8 @@ Getting started with Clojure from simple examples.
 - [Day 7 – Create and run your first project](/day7)
 - [License](#license)
 
+This is a project for personal use, suitable for those starting out in Clojure. Feel free to fork this project, make it even more complete and continue with your studies.
+
 ---
 
 ## License
